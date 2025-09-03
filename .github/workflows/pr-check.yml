@@ -1,0 +1,13 @@
+name: PR Quality Check
+
+on:
+  pull_request_target:
+    types:
+      - opened
+      - edited
+      - synchronize
+
+jobs:
+  lint-pr-title:
+    uses: muntianus/.github/.github/workflows/lint-pr-title.yml@main
+    secrets: inherit
